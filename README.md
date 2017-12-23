@@ -7,10 +7,9 @@ Example project for uploading file to Firebase Storage using
 
 Run :
 
-`npm install`
+- `npm install`
 
-`react-native link`
-
+- `react-native link`
 
 - Change `firebaseconf.js.example` to `firebaseconf.js`
 
