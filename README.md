@@ -1,13 +1,21 @@
 # FirebaseReactNative
 
 Example project for uploading file to Firebase Storage using
-\n`react-native-document-picker`
-\nand
-\n`react-native-fetch-blob`
 
-Run : \n
-`npm install`\n
-`react-native link`\n
+`react-native-document-picker`
 
-Then change `firebaseconf.js.example` to `firebaseconf.js`\n
-and set your firebase API key, database URL, and storage bucket URL on that file
+and
+
+`react-native-fetch-blob`
+
+
+Run :
+
+`npm install`
+
+`react-native link`
+
+
+- Change `firebaseconf.js.example` to `firebaseconf.js`
+
+- Set your firebase API key, database URL, and storage bucket URL on that file
