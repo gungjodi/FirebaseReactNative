@@ -20,7 +20,7 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
-
+firebaseconf.js
 project.xcworkspace
 
 # Android/IntelliJ
