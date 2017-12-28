@@ -13,12 +13,10 @@ import {
   Button
 } from 'react-native';
 
+import firebase from 'firebase';
 import { DocumentPicker, DocumentPickerUtil } from 'react-native-document-picker';
 import RNFetchBlob from 'react-native-fetch-blob';
-import {firebaseApp} from './firebaseconf';
-
-// Initialize Firebase
-const storage = firebaseApp.storage();
+import {firebaseConf} from './firebaseconf';
 
 const Blob = RNFetchBlob.polyfill.Blob
 window.XMLHttpRequest = RNFetchBlob.polyfill.XMLHttpRequest
@@ -34,13 +32,20 @@ export default class App extends Component {
       afterUpload:0,
       errText:null
     }
+    
   }
+
+  componentWillMount()
+  {
+    firebase.initializeApp(firebaseConf);
+  }
+
   uploadImage = (uri, mime = 'application/octet-stream',fileName) => {
     return new Promise((resolve, reject) => {
       const uploadUri = Platform.OS === 'ios' ? uri.replace('file://', '') : uri
         const sessionId = new Date().getTime()
         let uploadBlob = null
-        const imageRef = storage.ref().child(`${sessionId}`).child(fileName);
+        const imageRef = firebase.storage().ref().child(`${sessionId}`).child(fileName);
 
         RNFetchBlob.fs.readFile(uploadUri, 'base64')
         .then((data) => {

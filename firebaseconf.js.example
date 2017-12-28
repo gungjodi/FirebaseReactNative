@@ -1,9 +1,10 @@
-//change this file to 'firebaseconf.js'
-import * as firebase from 'firebase';
-
 const firebaseConfig = {
     apiKey: "<your-api-key>",
-    databaseURL: "<your-database-url>",
-    storageBucket: "<your-storage-bucket-url>"
+    authDomain: "xxx.firebaseapp.com",
+    databaseURL: "https://xxx.firebaseio.com",
+    projectId: "<project-id>",
+    storageBucket: "xxx.appspot.com",
+    messagingSenderId: "<messagingSenderId>"
   };
-export const firebaseApp = firebase.initializeApp(firebaseConfig);
+
+export const firebaseConf = firebaseConfig;
