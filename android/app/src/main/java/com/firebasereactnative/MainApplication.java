@@ -3,9 +3,9 @@ package com.firebasereactnative;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
-import com.ocetnik.timer.BackgroundTimerPackage;
 import com.RNFetchBlob.RNFetchBlobPackage;
 import com.reactnativedocumentpicker.ReactNativeDocumentPicker;
+import com.ocetnik.timer.BackgroundTimerPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -26,9 +26,9 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new BackgroundTimerPackage(),
             new RNFetchBlobPackage(),
-            new ReactNativeDocumentPicker()
+            new ReactNativeDocumentPicker(),
+            new BackgroundTimerPackage()
       );
     }
 

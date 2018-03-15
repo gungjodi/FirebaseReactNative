@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { AppRegistry, Image, StatusBar } from "react-native";
 import {
 	Content,
 	Text,
@@ -14,7 +14,7 @@ import {
 	View,
 	StyleProvider,
 	getTheme,
-	variables,
+    variables,
 } from "native-base";
 
 import styles from "./style";
@@ -47,6 +47,15 @@ class SideBar extends Component {
 		return (
 			<Container>
 				<Content bounces={false} style={{ flex: 1, backgroundColor: "#fff", top: -1 }}>
+                    <Image
+                        source={require("../../img/sidebar/sidebarPattern.png")}
+                        style={{
+                        height: 120,
+                        alignSelf: "stretch",
+                        justifyContent: "center",
+                        alignItems: "center"
+                        }}>
+                    </Image>
 					<List
 						dataArray={datas}
 						renderRow={data =>
